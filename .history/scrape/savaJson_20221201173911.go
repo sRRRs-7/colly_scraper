@@ -1,0 +1,3 @@
+package scrape
+
+func saveJson() {}

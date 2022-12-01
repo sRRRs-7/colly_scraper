@@ -1,0 +1,3 @@
+package colly
+
+func Scraper() {}

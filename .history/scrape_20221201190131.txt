@@ -1,0 +1,105 @@
+1 Skip to content
+1 Sign up
+2 Actions | Automate any workflow
+2 Packages | Host and manage packages
+2 Security | Find and fix vulnerabilities
+2 Codespaces | Instant dev environments
+2 Copilot | Write better code with AI
+2 Code review | Manage code changes
+2 Issues | Plan and track work
+2 Discussions | Collaborate outside of code
+1 All features
+1 Documentation
+1 GitHub Skills
+1 Blog
+1 Enterprise
+1 Teams
+1 Startups
+1 Education
+1 CI/CD & Automation
+1 DevOps
+1 DevSecOps
+1 Customer Stories
+1 Resources
+2 GitHub Sponsors | Fund open source developers
+2 The ReadME Project | GitHub community articles
+1 Topics
+1 Trending
+1 Collections
+1 Pricing
+1 In this repository
+1 All GitHub
+1 ↵
+2 Jump to | ↵
+1 In this repository
+1 All GitHub
+1 ↵
+2 Jump to | ↵
+1 In this organization
+1 All GitHub
+1 ↵
+2 Jump to | ↵
+1 In this repository
+1 All GitHub
+1 ↵
+2 Jump to | ↵
+1 Sign in
+2 Sign up | gocollycolly
+1 Notifications
+2 Fork | 1.5k
+3 Star | 18.3k | go-colly.org/
+1 Apache-2.0 license
+2 18.3k | stars
+2 1.5k | forks
+1 Star
+1 Notifications
+1 Code
+2 Issues | 136
+2 Pull requests | 25
+1 Actions
+2 Projects | 0
+1 Security
+1 Insights
+1 Code
+1 Issues
+1 Pull requests
+1 Actions
+1 Projects
+1 Security
+1 Insights
+3 {{ refName }} | default | View all branches
+3 {{ refName }} | default | View all tags
+2 3 | branches
+2 6 | tags
+1 Learn more
+1 Open with GitHub Desktop
+2 Download ZIP | sign indownload GitHub Desktopdownload GitHub Desktopdownload Xcode
+2 asciimoo[fix] typo | 947eeea
+2 Jul 6, 2022 | [fix] typo
+1 626
+1 commits
+2 Permalink.githubAdd GitHub issue templates_examplesUpdate openedx_courses.gocmd/collyfix: generated code has compile errordebugFix variable names in js and lock during MarshalextensionsFix golint issueproxy[fix] tyopqueueWork around invalid URL encoding in pathstorage[mod] simplify the cookie layer in storage interface.codecov.ymlturn off codecov commentsCHANGELOG.md[doc] add changelog -closes#509CONTRIBUTING.mdFix Contributing.md linkLICENSE.txt[enh] add request & response callbacks ++ cookie handling ++ readmeREADME.mdreplace travis with GHAVERSION[enh] bump version to 2.1.0colly.go[fix] typocolly_test.goFix redirects ignoring AllowURLRevisit=falsecontext.go[mod] add license headercontext_test.go[mod] add license headergo.modBump whatwg-url versiongo.sumBump whatwg-url versionhtmlelement.goadded ChildTexts method to htmlelement: returns the stripped text con…http_backend.goAdd httpBackend cache response callbackhttp_trace.goAdds HTTP Tracing to colly requests that are accessible from the coll…http_trace_test.goAdds HTTP Tracing to colly requests that are accessible from the coll…request.goMerge pull request#691from ErikOwen/feat/custom-header-supportresponse.goImprove the docstring for Response.Trace.unmarshal.goAdd map unmarshalunmarshal_test.goAdd map unmarshalxmlelement.goChange type assertionxmlelement_test.goUpdate go.mod github.com/gocolly/colly/v2CollyFeaturesExampleInstallationBugsOther Projects Using CollyContributorsBackersSponsorsLicenseREADME.mdexamples folderissue trackergreenpeace/check-my-pagesaltsab/gowapjesuiscamille/goquotesjivesearch/jivesearchLeagify/colly-draft-prospectslucasepe/go-ps4yringler/inside-chassidus-scrapergamedb/gamedblawzava/scrapeeureka101v/WeiboSpiderGoGo-phie/gophieimthaghost/goclonesuperiss/spidydocker-slim/docker-slimseversky/gachifindereval-exec/goodreads[Contribute]Become a backerBecome a sponsorgo-colly.org/ | go
+1 golang
+1 crawler
+1 scraper
+1 framework
+1 spider
+1 scraping
+1 crawling
+1 Readme
+1 Apache-2.0 license
+2 18.3k | stars
+2 325 | watching
+2 1.5k | forks
+2 Releases | 5
+1 v2.1.0
+1 Latest
+1 Jun 8, 2020
+1 + 4 releases
+1 Packages 0
+1 Used by 5
+1 Contributors 99
+1 + 88 contributors
+2 Go | 99.3%
+2 HTML | 0.7%
+1 TermsPrivacySecurityStatusDocsContact GitHubPricingAPITrainingBlogAboutReloadReload

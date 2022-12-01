@@ -1,0 +1,610 @@
+Skip to content
+
+
+
+
+Sign  up
+
+
+
+
+
+Actions
+Automate any workflow
+
+
+
+
+
+
+
+
+Packages
+Host and manage packages
+
+
+
+
+
+
+
+
+Security
+Find and fix vulnerabilities
+
+
+
+
+
+
+
+
+Codespaces
+Instant dev environments
+
+
+
+
+
+
+
+
+Copilot
+Write better code with AI
+
+
+
+
+
+
+
+
+Code review
+Manage code changes
+
+
+
+
+
+
+
+
+Issues
+Plan and track work
+
+
+
+
+
+
+
+
+Discussions
+Collaborate outside of code
+
+
+
+
+All features
+
+
+
+Documentation
+
+
+
+
+
+GitHub Skills
+
+
+
+
+
+Blog
+
+
+
+
+
+Enterprise
+
+
+
+Teams
+
+
+
+Startups
+
+
+
+Education
+
+
+
+
+
+CI / CD & Automation
+
+
+
+DevOps
+
+
+
+
+
+DevSecOps
+
+
+
+
+
+Customer Stories
+
+
+
+Resources
+
+
+
+
+
+
+
+GitHub Sponsors
+Fund open source developers
+
+
+
+
+
+
+The ReadME Project
+GitHub community articles
+
+
+
+
+Topics
+
+
+
+Trending
+
+
+
+Collections
+
+
+Pricing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In this repository
+
+
+All GitHub
+
+↵
+
+
+
+Jump to↵
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In this repository
+
+
+All GitHub
+
+↵
+
+
+
+Jump to↵
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In this organization
+
+
+All GitHub
+
+↵
+
+
+
+Jump to↵
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In this repository
+
+
+All GitHub
+
+↵
+
+
+
+Jump to↵
+
+
+Sign in
+
+    Sign up
+gocollycolly
+
+Notifications
+
+
+Fork
+1.5 k
+
+
+
+Star
+18.3 k
+go - colly.org /
+
+
+
+    Apache - 2.0 license
+
+
+
+
+18.3 k
+stars
+
+
+
+
+1.5 k
+forks
+
+
+
+Star
+
+
+
+Notifications
+
+
+
+
+
+Code
+
+
+
+
+
+
+
+
+
+Issues
+136
+
+
+
+
+
+
+
+
+Pull requests
+25
+
+
+
+
+
+
+
+
+Actions
+
+
+
+
+
+
+
+
+
+Projects
+0
+
+
+
+
+
+
+
+
+Security
+
+
+
+
+
+
+
+
+Insights
+
+
+
+
+
+Code
+
+Issues
+
+Pull requests
+
+Actions
+
+Projects
+
+Security
+
+Insights
+
+
+
+
+{
+    { refName } }
+default
+View all branches
+
+
+
+{
+    { refName } }
+default
+View all tags
+
+
+
+3
+branches
+
+
+
+
+6
+tags
+
+
+
+
+Learn more
+
+
+
+Open with GitHub Desktop
+
+
+
+
+Download ZIP
+sign indownload GitHub Desktopdownload GitHub Desktopdownload Xcode
+
+asciimoo[fix] typo
+947e eea
+
+Jul 6, 2022
+    [fix] typo
+
+
+
+
+626
+
+commits
+
+
+Permalink.githubAdd GitHub issue templates_examplesUpdate openedx_courses.gocmd / collyfix: generated code has compile errordebugFix variable names in js and lock during MarshalextensionsFix golint issueproxy[fix] tyopqueueWork around invalid URL encoding in pathstorage[mod] simplify the cookie layer in storage interface.codecov.ymlturn off codecov commentsCHANGELOG.md[doc] add changelog - closes #509CONTRIBUTING.mdFix Contributing.md linkLICENSE.txt[enh] add request & response callbacks ++ cookie handling ++ readmeREADME.mdreplace travis with GHAVERSION[enh] bump version to 2.1.0colly.go[fix] typocolly_test.goFix redirects ignoring AllowURLRevisit= falsecontext.go[mod] add license headercontext_test.go[mod] add license headergo.modBump whatwg - url versiongo.sumBump whatwg - url versionhtmlelement.goadded ChildTexts method to htmlelement: returns the stripped text con… http_backend.goAdd httpBackend cache response callbackhttp_trace.goAdds HTTP Tracing to colly requests that are accessible from the coll… http_trace_test.goAdds HTTP Tracing to colly requests that are accessible from the coll… request.goMerge pull request #691from ErikOwen/feat/custom-header-supportresponse.goImprove the docstring for Response.Trace.unmarshal.goAdd map unmarshalunmarshal_test.goAdd map unmarshalxmlelement.goChange type assertionxmlelement_test.goUpdate go.mod github.com/gocolly/colly/v2CollyFeaturesExampleInstallationBugsOther Projects Using CollyContributorsBackersSponsorsLicenseREADME.mdexamples folderissue trackergreenpeace/check-my-pagesaltsab/gowapjesuiscamille/goquotesjivesearch/jivesearchLeagify/colly-draft-prospectslucasepe/go-ps4yringler/inside-chassidus-scrapergamedb/gamedblawzava/scrapeeureka101v/WeiboSpiderGoGo-phie/gophieimthaghost/goclonesuperiss/spidydocker-slim/docker-slimseversky/gachifindereval-exec/goodreads[Contribute]Become a backerBecome a sponsorgo-colly.org/
+  go
+
+  golang
+
+  crawler
+
+  scraper
+
+  framework
+
+  spider
+
+  scraping
+
+  crawling
+
+
+
+
+      Readme
+
+
+
+
+     Apache-2.0 license
+
+
+
+
+    18.3k
+    stars
+
+
+
+
+    325
+    watching
+
+
+
+
+    1.5k
+    forks
+
+    Releases
+      5
+
+
+
+
+
+
+        v2.1.0
+
+          Latest
+
+      Jun 8, 2020
+
+
+        + 4 releases
+
+    Packages 0
+
+        Used by 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Contributors 99
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      + 88 contributors
+
+
+
+
+          Go
+          99.3%
+
+
+
+
+          HTML
+          0.7%
+
+
+
+
+TermsPrivacySecurityStatusDocsContact GitHubPricingAPITrainingBlogAboutReloadReload
