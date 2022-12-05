@@ -1,0 +1,34 @@
+{
+    "status_code": 200,
+    "url": "https://news.yahoo.com/",
+    "title": "Yahoo News - Latest News \u0026 Headlines",
+    "product": [{
+            "title": "",
+            "url": "https://news.yahoo.com/",
+            "price": "",
+            "star": "",
+            "image": ""
+        },
+        {
+            "title": "",
+            "url": "https://news.yahoo.com/",
+            "price": "",
+            "star": "",
+            "image": ""
+        },
+        {
+            "title": "",
+            "url": "https://news.yahoo.com/",
+            "price": "",
+            "star": "",
+            "image": ""
+        },
+        {
+            "title": "",
+            "url": "https://news.yahoo.com/",
+            "price": "",
+            "star": "",
+            "image": ""
+        }
+    ]
+}
