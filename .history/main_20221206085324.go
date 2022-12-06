@@ -17,9 +17,9 @@ func main() {
 
 	for page := 1; page <= 10; page++ {
 		page_str := strconv.Itoa(page)
-		url := "https://www.amazon.co.jp/s?k=%E4%BA%BA%E3%82%92%E3%83%80%E3%83%A1%E3%81%AB%E3%81%99%E3%82%8B&crid=3PZWAG8WRMCCP&sprefix=%E4%BA%BA%E3%82%92%E3%83%80%E3%83%A1%E3%81%AB%E3%81%99%E3%82%8B%2Caps%2C239&ref=nb_sb_noss_" + page_str
+		url := "https://www.amazon.co.jp/s?k=%E5%8C%96%E7%B2%A7%E6%B0%B4&crid=B3LEZ35ZHVS8&sprefix=%E5%8C%96%E7%B2%A7%E6%B0%B4%2Caps%2C256&ref=nb_sb_noss_"+ page_str
 		// methods
-		info = scrape.GetAmazon(c, url, &product, &info, &id)
+		info = scrape.GetHTMLTitle(c, url, &product, &info, &id)
 	}
 
 	scrape.SaveFileJson("scrape.json", &info)

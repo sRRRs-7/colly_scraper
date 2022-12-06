@@ -9,7 +9,7 @@ import (
 	"github.com/sRRRs-7/colly_scraper/utils"
 )
 
-func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *Info, id *int) Info {
+func GetHTMLTitle(c *colly.Collector, url string, products *[]ProductInfo, info *Info, id *int) Info {
 	// html element
 	c.OnHTML("title", func(e *colly.HTMLElement) {
 		info.Title = e.Text
@@ -40,15 +40,14 @@ func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *In
 			*id--
 		} else {
 			*products = append(*products, product)
-			info.ProductList = *products
+			info.Article = *products
 			// array sort logic
-			sort.Slice(info.ProductList, func(i, j int) bool {
-				i1, _ := strconv.Atoi(info.ProductList[i].Price)
-				i2, _ := strconv.Atoi(info.ProductList[j].Price)
+			sort.Slice(info.Article, func(i, j int) bool {
+				i1, _ := strconv.Atoi(info.Article[i].Price)
+				i2, _ := strconv.Atoi(info.Article[j].Price)
 				return i1 < i2
 			})
 		}
-		info.ProductCount = len(*products)
 	})
 	// error
 	c.OnError(func(r *colly.Response, err error){

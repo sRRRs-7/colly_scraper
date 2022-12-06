@@ -4,8 +4,8 @@ type Info struct {
 	StatusCode int `json:"status_code"`
 	URL string `json:"url"`
 	Title string `json:"title"`
-	ProductCount int `json:"product_count"`
-	ProductList []ProductInfo `json:"product"`
+	ProductCount int `json:"article_count"`
+	Article []ProductInfo `json:"product"`
 }
 
 type ProductInfo struct {

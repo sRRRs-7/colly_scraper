@@ -3,13 +3,12 @@ package scrape
 import (
 	"fmt"
 	"sort"
-	"strconv"
 
 	"github.com/gocolly/colly"
 	"github.com/sRRRs-7/colly_scraper/utils"
 )
 
-func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *Info, id *int) Info {
+func GetHTMLTitle(c *colly.Collector, url string, products *[]ProductInfo, info *Info, id *int) Info {
 	// html element
 	c.OnHTML("title", func(e *colly.HTMLElement) {
 		info.Title = e.Text
@@ -36,19 +35,17 @@ func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *In
 		img, _ := e.DOM.Find("img").Attr("src")
 		product.Image = img
 
+		*products = append(*products, product)
 		if product.Name == "" || product.Price == "" {
 			*id--
 		} else {
-			*products = append(*products, product)
-			info.ProductList = *products
-			// array sort logic
-			sort.Slice(info.ProductList, func(i, j int) bool {
-				i1, _ := strconv.Atoi(info.ProductList[i].Price)
-				i2, _ := strconv.Atoi(info.ProductList[j].Price)
-				return i1 < i2
-			})
+			info.Article = *products
 		}
-		info.ProductCount = len(*products)
+		// array sort logic
+		sort.Slice(info.Article, func(i, j int) bool {
+			return info.Article[i].Price < info.Article[j].Price
+		})
+
 	})
 	// error
 	c.OnError(func(r *colly.Response, err error){

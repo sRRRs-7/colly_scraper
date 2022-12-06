@@ -9,7 +9,7 @@ import (
 	"github.com/sRRRs-7/colly_scraper/utils"
 )
 
-func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *Info, id *int) Info {
+func GetHTMLTitle(c *colly.Collector, url string, products *[]ProductInfo, info *Info, id *int) Info {
 	// html element
 	c.OnHTML("title", func(e *colly.HTMLElement) {
 		info.Title = e.Text
