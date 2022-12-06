@@ -1,0 +1,3 @@
+package mecab
+
+func NewMecab() {}

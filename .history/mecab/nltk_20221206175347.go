@@ -1,0 +1,18 @@
+package mecab
+
+import (
+	"fmt"
+	"strings"
+)
+
+var st = "I'm a Mr. Smith"
+
+func NewNltk() {
+	s := []string{}
+	s = strings.Split(st, " ")
+	s = strings.Split(s, `'`)
+	s = strings.Split(s, ".")
+
+
+	fmt.Println(s)
+}
