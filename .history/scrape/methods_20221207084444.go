@@ -70,13 +70,11 @@ func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *In
 func distinct(arr []ProductInfo) []ProductInfo {
 	list := map[string]bool{}
 	uniq := []ProductInfo{}
-	id := 0
 	for _, l := range arr {
 		if !list[l.Name] {
 			list[l.Name] = true
-			l.ID = id
+			l.ID = 1
 			uniq = append(uniq, l)
-			id++
 		}
 	}
 	return uniq

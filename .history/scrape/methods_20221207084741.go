@@ -74,9 +74,8 @@ func distinct(arr []ProductInfo) []ProductInfo {
 	for _, l := range arr {
 		if !list[l.Name] {
 			list[l.Name] = true
-			l.ID = id
+			l.ID = 1
 			uniq = append(uniq, l)
-			id++
 		}
 	}
 	return uniq

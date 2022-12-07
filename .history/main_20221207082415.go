@@ -13,12 +13,17 @@ func main() {
 	// struct instance
 	product := []scrape.ProductInfo{}
 	info := scrape.Info{}
+	id := 0
 
 	for page := 1; page <= 10; page++ {
 		page_str := strconv.Itoa(page)
 		url := "https://www.amazon.co.jp/s?k=anker&crid=3OXITLFR8UF3J&sprefix=anke%2Caps%2C247&ref=nb_sb_noss_" + page_str
 		// methods
-		info = scrape.GetAmazon(c, url, &product, &info)
+		info = scrape.GetAmazon(c, url, &product, &info, &id)
+	}
+
+	for i, x := range product {
+		x.ID = i
 	}
 
 	scrape.SaveFileJson("scrape.json", &info)

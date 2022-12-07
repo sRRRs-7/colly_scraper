@@ -9,7 +9,7 @@ import (
 	"github.com/sRRRs-7/colly_scraper/utils"
 )
 
-func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *Info) Info {
+func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *Info, id *int) Info {
 	// html element
 	c.OnHTML("title", func(e *colly.HTMLElement) {
 		info.Title = e.Text
@@ -25,6 +25,9 @@ func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *In
 	// product scraping
 	product := ProductInfo{}
 	c.OnHTML("div.a-spacing-base", func(e *colly.HTMLElement) {
+		*id++
+		product.ID = *id
+
 		product.Name = e.DOM.Find("h2").Children().Text()
 
 		url, _ := e.DOM.Find("a").Attr("href")
@@ -38,9 +41,10 @@ func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *In
 		img, _ := e.DOM.Find("img").Attr("src")
 		product.Image = img
 
-		if product.Name != "" || product.Price != "" {
+		if product.Name == "" || product.Price == "" {
+			*id--
+		} else {
 			*products = append(*products, product)
-			info.ProductList = *products
 		}
 		// distinct logic
 		uniq := distinct(info.ProductList)
@@ -53,6 +57,8 @@ func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *In
 		})
 		// product count
 		info.ProductCount = len(*products)
+
+		info.ProductList = *products
 	})
 	// error
 	c.OnError(func(r *colly.Response, err error){
@@ -70,13 +76,10 @@ func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *In
 func distinct(arr []ProductInfo) []ProductInfo {
 	list := map[string]bool{}
 	uniq := []ProductInfo{}
-	id := 0
 	for _, l := range arr {
 		if !list[l.Name] {
 			list[l.Name] = true
-			l.ID = id
 			uniq = append(uniq, l)
-			id++
 		}
 	}
 	return uniq

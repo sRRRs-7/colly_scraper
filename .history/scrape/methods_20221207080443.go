@@ -41,16 +41,16 @@ func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *In
 		if product.Name != "" || product.Price != "" {
 			*products = append(*products, product)
 			info.ProductList = *products
+			// array sort logic
+			sort.Slice(info.ProductList, func(i, j int) bool {
+				i1, _ := strconv.Atoi(info.ProductList[i].Price)
+				i2, _ := strconv.Atoi(info.ProductList[j].Price)
+				return i1 < i2
+			})
 		}
 		// distinct logic
 		uniq := distinct(info.ProductList)
 		*products = uniq
-		// array sort logic
-		sort.Slice(info.ProductList, func(i, j int) bool {
-			i1, _ := strconv.Atoi(info.ProductList[i].Price)
-			i2, _ := strconv.Atoi(info.ProductList[j].Price)
-			return i1 < i2
-		})
 		// product count
 		info.ProductCount = len(*products)
 	})
@@ -70,14 +70,14 @@ func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *In
 func distinct(arr []ProductInfo) []ProductInfo {
 	list := map[string]bool{}
 	uniq := []ProductInfo{}
-	id := 0
 	for _, l := range arr {
 		if !list[l.Name] {
 			list[l.Name] = true
-			l.ID = id
 			uniq = append(uniq, l)
-			id++
 		}
+	}
+	for i, l := range uniq {
+		l.ID = i
 	}
 	return uniq
 }

@@ -68,7 +68,7 @@ func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *In
 
 // distinct function
 func distinct(arr []ProductInfo) []ProductInfo {
-	list := map[string]bool{}
+	list := make(map[string]struct{})
 	uniq := []ProductInfo{}
 	id := 0
 	for _, l := range arr {

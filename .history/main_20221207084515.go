@@ -13,6 +13,7 @@ func main() {
 	// struct instance
 	product := []scrape.ProductInfo{}
 	info := scrape.Info{}
+	id := 0
 
 	for page := 1; page <= 10; page++ {
 		page_str := strconv.Itoa(page)

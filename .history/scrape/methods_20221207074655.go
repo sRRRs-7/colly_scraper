@@ -9,7 +9,7 @@ import (
 	"github.com/sRRRs-7/colly_scraper/utils"
 )
 
-func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *Info) Info {
+func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *Info, id *int) Info {
 	// html element
 	c.OnHTML("title", func(e *colly.HTMLElement) {
 		info.Title = e.Text
@@ -25,33 +25,34 @@ func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *In
 	// product scraping
 	product := ProductInfo{}
 	c.OnHTML("div.a-spacing-base", func(e *colly.HTMLElement) {
+		*id++
+		product.ID = *id
 		product.Name = e.DOM.Find("h2").Children().Text()
-
 		url, _ := e.DOM.Find("a").Attr("href")
 		product.URL = "https://www.amazon.co.jp" + url
-
 		p := e.DOM.Find("span.a-price-whole").Text()
 		product.Price = utils.PriceReplace(p)
-
 		product.Star = e.DOM.Find("span.a-icon-alt").Text()
-
 		img, _ := e.DOM.Find("img").Attr("src")
 		product.Image = img
 
-		if product.Name != "" || product.Price != "" {
+		if product.Name == "" || product.Price == "" {
+			*id--
+		} else {
 			*products = append(*products, product)
 			info.ProductList = *products
+			// array sort logic
+			sort.Slice(info.ProductList, func(i, j int) bool {
+				i1, _ := strconv.Atoi(info.ProductList[i].Price)
+				i2, _ := strconv.Atoi(info.ProductList[j].Price)
+				return i1 < i2
+			})
 		}
-		// distinct logic
-		uniq := distinct(info.ProductList)
-		*products = uniq
-		// array sort logic
-		sort.Slice(info.ProductList, func(i, j int) bool {
-			i1, _ := strconv.Atoi(info.ProductList[i].Price)
-			i2, _ := strconv.Atoi(info.ProductList[j].Price)
-			return i1 < i2
-		})
-		// product count
+		list := map[string]bool{}
+		for _, l := range info.ProductList {
+			if !list[l.Name]
+		}
+
 		info.ProductCount = len(*products)
 	})
 	// error
@@ -64,22 +65,6 @@ func GetAmazon(c *colly.Collector, url string, products *[]ProductInfo, info *In
 	c.Wait()
 
 	return *info
-}
-
-// distinct function
-func distinct(arr []ProductInfo) []ProductInfo {
-	list := map[string]bool{}
-	uniq := []ProductInfo{}
-	id := 0
-	for _, l := range arr {
-		if !list[l.Name] {
-			list[l.Name] = true
-			l.ID = id
-			uniq = append(uniq, l)
-			id++
-		}
-	}
-	return uniq
 }
 
 
