@@ -12,7 +12,7 @@ type ProductInfo struct {
 	ID    int    `json:"id"`
 	Name  string `json:"title"`
 	URL   string `json:"url"`
-	Price string `json:"price"`
+	Price int    `json:"price"`
 	Star  string `json:"star"`
 	Image string `json:"image"`
 }

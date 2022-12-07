@@ -7,6 +7,7 @@ import (
 	"github.com/sRRRs-7/colly_scraper/scrape"
 )
 
+
 func main() {
 	// instance
 	c := scrape.NewScraper()
@@ -23,5 +24,5 @@ func main() {
 
 	scrape.SaveFileJson("scrape.json", &info)
 
-	db.JsonInitData()
+	db.JsonInitData
 }

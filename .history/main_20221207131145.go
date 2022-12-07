@@ -3,9 +3,9 @@ package main
 import (
 	"strconv"
 
-	"github.com/sRRRs-7/colly_scraper/db"
 	"github.com/sRRRs-7/colly_scraper/scrape"
 )
+
 
 func main() {
 	// instance
